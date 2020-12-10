@@ -39,19 +39,6 @@
       </div>
     </section>
   </article>
-  <!-- <article class="card">
-    <div class="face face1">
-      <div class="content">
-        <img :src="country.flag" alt="country flag" />
-        <h2>{{ country.name }}</h2>
-        <button @click="star">Favorite</button>
-      </div>
-    </div>
-    <div class="face face2">
-      <div class="content">
-      </div>
-    </div>
-  </article> -->
 </template>
 
 <script>
@@ -67,7 +54,7 @@ export default {
   computed: {
     ...mapGetters("countries", ["getCountryByKey", "isFavorite"]),
     borders() {
-      return this.country.borders.map(code => {
+      return this.country.borders.map((code) => {
         const result = this.getCountryByKey("alpha3Code", code);
         return result && result.name;
       });

@@ -3,7 +3,7 @@
     <AppHeader :title="title" />
     <aside class="panel">
       <SearchBox v-model="keyword" />
-      <CountryDetail :country="selected" @country:starred="starred" />
+      <CountryCard :country="selected" @country:starred="starred" />
     </aside>
     <main class="content">
       <section>
@@ -31,7 +31,7 @@ import { mapActions, mapState, mapGetters } from "vuex";
 
 import AppHeader from "../components/AppHeader.vue";
 import AppLoader from "@/components/AppLoader.vue";
-import CountryDetail from "@/components/CountryDetail.vue";
+import CountryCard from "@/components/CountryCard.vue";
 import CountryItem from "@/components/CountryItem.vue";
 import CountryRegion from "../components/CountryRegion.vue";
 import ErrorView from "./ErrorView.vue";
@@ -40,7 +40,7 @@ import SearchBox from "@/components/SearchBox.vue";
 export default {
   name: "Home",
   components: {
-    CountryDetail,
+    CountryCard,
     CountryItem,
     SearchBox,
     AppLoader,
