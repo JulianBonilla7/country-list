@@ -3,7 +3,7 @@
     <AppHeader :title="title" />
     <aside class="panel">
       <SearchBox v-model="keyword" />
-      <CountryCard :country="selected" @country:starred="starred" />
+      <CountryCard :country="selected" />
     </aside>
     <main class="content">
       <section>
