@@ -54,7 +54,7 @@ export default {
   computed: {
     ...mapGetters("countries", ["getCountryByKey", "isFavorite"]),
     borders() {
-      return this.country.borders.map((code) => {
+      return this.country.borders.map(code => {
         const result = this.getCountryByKey("alpha3Code", code);
         return result && result.name;
       });
@@ -130,60 +130,4 @@ $color-text: #404040;
     font-weight: bold;
   }
 }
-
-// .card {
-//   position: relative;
-//   cursor: pointer;
-//   .face {
-//     // width: 300px;
-//     height: 200px;
-//     transition: 0.5s;
-//   }
-//   .face.face1 {
-//     position: relative;
-//     // background: #333;
-//     // display: flex;
-//     // justify-content: center;
-//     // align-items: center;
-//     z-index: 1;
-//     transform: translateY(100px);
-//     .content {
-//       // opacity: 0.2;
-//       transition: 0.5s;
-//       img {
-//         // max-width: 100px;
-//       }
-//       h3 {
-//         // margin: 10px 0 0;
-//         // padding: 0;
-//         // color: #fff;
-//         // text-align: center;
-//         // font-size: 1.5em;
-//       }
-//     }
-//   }
-//   &:hover {
-//     .face.face1 {
-//       // background: #ff0057;
-//       transform: translateY(0);
-//       .content {
-//         // opacity: 1;
-//       }
-//     }
-//     .face.face2 {
-//       transform: translateY(0);
-//     }
-//   }
-//   .face.face2 {
-//     position: relative;
-//     // background: #fff;
-//     // display: flex;
-//     // justify-content: center;
-//     // align-items: center;
-//     padding: 20px;
-//     box-sizing: border-box;
-//     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-//     transform: translateY(-100px);
-//   }
-// }
 </style>
